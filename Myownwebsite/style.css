@@ -32,7 +32,7 @@ body{
     flex-direction: row;
     
     
-    justify-content: space-between;
+    justify-content: space-around;
     
     z-index: 999;
 
@@ -84,26 +84,11 @@ body{
 }
 
 .humburger{
-   
-    position: relative;
-    top:5vh;
-    right:1vw;
-   
+    display: none;
 }
 
-.humburger .line{
-    display: block;
-    background: black;
-    
-    width: 20px;
-    height: 2px; 
 
-    margin-bottom: 3px;
 
-    
-    
-    
-}
 
 /* .humburger:nth-child(1){
     display: block;
@@ -126,6 +111,61 @@ body{
     width: 20px;
     height: 2px;    
 } */
+
+@media screen and (max-width : 850px){
+
+    .nav-bar{
+        display: block;
+    }
+
+    .logo{
+
+        height:10vh;
+        position: absolute;
+        left:10px;
+    }
+
+    .humburger{
+        display: block;
+   
+        position: absolute;
+        top:4vh;
+        right:20px;
+        
+    }
+  
+
+    .humburger .line{
+        display: block;
+        background: black;
+        
+        width: 20px;
+        height: 2px; 
+
+        margin-bottom: 3px;
+    }
+
+    .menu{
+        width:20vw;
+    }
+    .menu-content{
+        width:100%;
+        background-color: #eed8c1;
+
+        height: 90vh;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        justify-content: space-around;
+
+        position:absolute;
+        top:10vh;
+    }
+
+
+}
+
 
 /* here starts the content*/
 .intro{
