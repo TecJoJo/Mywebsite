@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box;
+
+    margin:0;
+
+    
+
+    
+    
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+.nav-bar{
+    
+    
+    background-color:#f1bb80;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 10vh;
+
+
+    display: flex;
+    flex-direction: row;
+    
+    
+    justify-content: space-between;
+    
+    z-index: 999;
+
+
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* .menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+} */
+
+.menu-content{
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+
+.menu-content li{
+    
+    list-style: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.menu-content li a{
+
+    
+    
+    color:black;
+}
+
+.menu-content li a:hover{
+    color:white;
+}
+
+.humburger{
+   
+    position: relative;
+    top:5vh;
+    right:1vw;
+   
+}
+
+.humburger .line{
+    display: block;
+    background: black;
+    
+    width: 20px;
+    height: 2px; 
+
+    margin-bottom: 3px;
+
+    
+    
+    
+}
+
+/* .humburger:nth-child(1){
+    display: block;
+    background:red;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 2px;    
+}
+.humburger:nth-child(2){
+    display: block;
+    background:red;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 2px;    
+}
+.humburger:nth-child(3){
+    display: block;
+    background:red;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 2px;    
+} */
+
+/* here starts the content*/
+.intro{
+    position: absolute;
+    top:10vh;
+    
+    min-height: 200vh;
+    width:100vw;
+    background-image:url(journey.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    
+}
+
+
+.intro p{
+    position:absolute;
+    top:60%;
+    left:50%
+
+}
