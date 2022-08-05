@@ -6,3 +6,5 @@ function ToggleHamburgerMenu(){
     HamburgerMenuSlider.classList.toggle("isactive")
 }
 hamburgerToggle.addEventListener("click",ToggleHamburgerMenu)
+
+
