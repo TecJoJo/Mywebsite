@@ -49,3 +49,4 @@ function renderTime(){
 }
 const counter = setInterval(renderTime,1000)
 
+//try to update it with git and see how it works 
