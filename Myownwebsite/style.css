@@ -355,3 +355,10 @@ body{
     position: absolute;
     right: 0;
 }
+
+
+.fa-solid.fa-chevron-right{
+    color: #00ADB5;
+    font-size: 200px;
+    
+}
