@@ -18,10 +18,10 @@
 }
 
 body{
-    width: 100vw;
+    width: 100%;
     min-height: 200vh;
 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -32,7 +32,7 @@ body{
     background:linear-gradient(to right,var(--color4) 50%,var(--color3));
     position: fixed;
     top:0;
-    width: 100vw;
+    width: 100%;
     height: 10vh;
 
 
@@ -40,7 +40,7 @@ body{
     flex-direction: row;
     
     
-    justify-content: space-around;
+    justify-content: space-between;
     
     z-index: 999;
 
@@ -48,21 +48,16 @@ body{
 
 }
 .logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+  width: 30%;
+  text-align: center;
 }
 
-/* .menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 50vw;
-} */
+.menu{
+    width: 70%;
+}
 
 .menu-content{
-    width: 50vw;
+    width: 80%;
     height: 10vh;
     display: flex;
     flex-direction: row;
@@ -143,7 +138,7 @@ body{
 
         position:absolute;
         top:10vh;
-        left:-105vw;
+        left:-100%;
         transition: all 0.5s ease-in-out;
     }
 
@@ -161,18 +156,18 @@ body{
 
 /* here starts the content*/
 .main-container{
-    width:100vw;
+    width:100%;
     height:100vh;
 
     position: absolute;
     top:10vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
 .hero-container{
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,7 +176,7 @@ body{
 
     position: absolute;
     top:10vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 
@@ -199,7 +194,7 @@ body{
 }
 
 .counter-container{
-    width: 100vw;
+    width: 100%;
     height: 90vh;
 
     position: absolute;
@@ -219,7 +214,7 @@ body{
 }
 
 .counter-main{
-    width:80vw;
+    width:80%;
     height: 50vh;
 
     background-color:rgb(255,255,255,0);
@@ -233,7 +228,7 @@ body{
 }
 
 .counter-main .display{
-    width:18vw;
+    width:18%;
     height: 30vh;
     background-color: bisque;
 
@@ -244,9 +239,9 @@ body{
 
     border-radius: 10px;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
-    margin:0 1vw;
+    margin:0 1%;
 }
 
 .counter-main p{
@@ -272,7 +267,7 @@ body{
 }
 
 .about-container{
-    width: 100vw;
+    width: 100%;
     height:90vh;
     position: absolute;
     top:190vh;
@@ -285,7 +280,7 @@ body{
 }
 
 .about-me{
-    width:40vw;
+    width:40%;
     height:90vh;
     background-color: var(--color2);
     text-align:center;
@@ -297,7 +292,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .about-me p{
@@ -308,7 +303,7 @@ body{
 
 .contact-me{
     height:10vh;
-    width: 60vw;
+    width: 60%;
     position: absolute;
     right: 0;
     bottom: 10vh;
@@ -333,14 +328,14 @@ body{
     
 }
 .projects-container{
-    width: 100vw;
+    width: 100%;
     height:90vh;
     position: absolute;
     top:280vh;
 
     font-size: 2rem;
 
-    overflow: hidden;
+    /* overflow: hidden; */
     
 }
 .projects{
