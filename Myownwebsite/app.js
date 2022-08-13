@@ -49,4 +49,41 @@ function renderTime(){
 }
 const counter = setInterval(renderTime,1000)
 
-//try to update it with git and see how it works 
+//stars from here the projects showcase part, try to use the objectconstructor and arrow-functions if needed to 
+//write the codes here, hopefully now collision with the globle variables
+const sources = ["./People - 84973.mp4","./Mountains - 81945.mp4"]
+
+function ProjectShowcase(){
+    this.projects = document.querySelector(".projects")
+    //add slider element dynamicly
+   
+    this.discription = document.querySelector(".discription-container")
+    this.btnContainer = document.querySelector(".button-container")
+    // this.slider.classList.add("slider")
+    // this.slider.innerHTML = source.map(url=>`
+    //     <video class="content" muted loop>
+    //     <source src="${url}">
+    //     </video>
+    // `).join("")
+    // this.projects.appendChild(this.slider)
+
+    this.renderSliders(sources)
+    
+    this.btnContainer.addEventListener("click",function(){
+        console.log("page slid")
+    })
+
+}
+
+ProjectShowcase.prototype.renderSliders = function(addressList){
+   addressList.forEach(function(url,index){
+        const slider = document.createElement("div")
+        slider.classList.add("slider")
+        slider.style.left = `${index*100}%`
+        console.log(slider)
+
+   })
+   
+}
+
+const page4 = new ProjectShowcase(sources)
