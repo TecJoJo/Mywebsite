@@ -51,39 +51,96 @@ const counter = setInterval(renderTime,1000)
 
 //stars from here the projects showcase part, try to use the objectconstructor and arrow-functions if needed to 
 //write the codes here, hopefully now collision with the globle variables
-const sources = ["./People - 84973.mp4","./Mountains - 81945.mp4"]
 
-function ProjectShowcase(){
+//changing the sources array will dynamicly change the content rendered in the website.
+const sources = ["./People - 84973.mp4","./Mountains - 81945.mp4","./journey.jpg"]
+
+function ProjectShowcase(addressList){
     this.projects = document.querySelector(".projects")
-    //add slider element dynamicly
-   
     this.discription = document.querySelector(".discription-container")
     this.btnContainer = document.querySelector(".button-container")
-    // this.slider.classList.add("slider")
-    // this.slider.innerHTML = source.map(url=>`
-    //     <video class="content" muted loop>
-    //     <source src="${url}">
-    //     </video>
-    // `).join("")
-    // this.projects.appendChild(this.slider)
-
-    this.renderSliders(sources)
+    this.btns =document.querySelectorAll(".btn")
+    //binding
+    this.renderSliders(addressList)
+      //this.slider must be put behind renderSliders is invoked, or it is undefined yet.
+    this.sliders = document.querySelectorAll(".slider")
+    this.btnControl()
+  
+    this.counter = 0
+   
     
-    this.btnContainer.addEventListener("click",function(){
-        console.log("page slid")
-    })
+   
+    
 
 }
 
 ProjectShowcase.prototype.renderSliders = function(addressList){
-   addressList.forEach(function(url,index){
+    
+    addressList.forEach(function(url,index){
         const slider = document.createElement("div")
         slider.classList.add("slider")
         slider.style.left = `${index*100}%`
-        console.log(slider)
+        if(url.endsWith("mp4")){
+        slider.innerHTML = `
+            <video class="content" autoplay muted loop>
+            <source src="${url}">
+            </video>
+        `}else{slider.innerHTML=`
+            <img src="${url}" class="content" alt="img">
 
-   })
+        `}
+            
+       
+        
+        this.projects.appendChild(slider)
+        
+    }.bind(this))
+        
+
    
 }
+
+ProjectShowcase.prototype.btnControl = function(){
+    this.btns.forEach((btn)=>{
+       btn.addEventListener("click",()=>{
+        if(btn.classList.contains("next")){
+            if(this.counter < sources.length-1){
+                this.counter++
+            }else{
+                this.counter = 0
+            }
+            
+            this.sliders.forEach((slider)=>{
+            
+            slider.style.transform = `translateX(${-this.counter*100}%)`
+            
+            })
+            console.log(this.counter);
+         }else{
+            if(this.counter > 0){
+                this.counter--
+            }else{
+                this.counter = sources.length-1
+            }
+            
+            this.sliders.forEach((slider)=>{
+            slider.style.transform = `translateX(${-this.counter*100}%)`
+            
+            })
+            console.log(this.counter);
+         }
+       })
+    })
+}
+       
+            
+            
+            
+  
+    
+
+    
+    
+    
 
 const page4 = new ProjectShowcase(sources)
