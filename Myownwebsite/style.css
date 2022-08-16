@@ -154,7 +154,7 @@ body{
 }
 
 
-/* here starts the content*/
+/* here starts the hero-container*/
 .main-container{
     width:100%;
     height:100vh;
@@ -192,6 +192,8 @@ body{
     z-index: -10;
 
 }
+
+/* here starts the Countdown part*/
 
 .counter-container{
     width: 100%;
@@ -327,6 +329,8 @@ body{
     transform:translate(-50%,-50%);
     
 }
+
+/* here starts the slider part */
 .projects-container{
     width: 100%;
     height:90vh;
@@ -422,3 +426,97 @@ body{
     font-size: 100px;
     
 }
+
+/* here starts the footer part */
+
+footer{
+    position:absolute;
+    top:370vh;
+    
+    height: 40vh;
+    width: 100%;
+
+    color: white;
+    
+}
+
+.gradient-block{
+    background:linear-gradient(to bottom, var(--color3) 5%, var(--color1) 80%);
+
+    height: 30%;
+    width: 100%;
+    
+}
+
+.footer-container{
+    background-color: var(--color1);
+
+    height: 70%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer-logo{
+    width:33%;
+    height: 100%;
+}
+
+.footer-menu{
+    width:34%;
+    height: 100%;
+
+    
+}
+
+.footer-menu p{
+    height: auto;
+    
+    position: absolute;
+    bottom: 5%;
+    left:50%;
+    transform: translateX(-50%);
+
+}
+.footer-menu i{
+    font-size: 1rem;
+    color: white;
+}
+
+.footermenu-content{
+    width: 100%;
+    height: 70%;  
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0;
+}
+
+.footer-menu li{
+    list-style-type: none;
+    
+}
+
+.footer-menu a{
+    color: white;
+}
+
+
+
+.footer-contacts{
+    width:33%;
+    height: 100%;
+
+
+}
+
+.SM-icons i{
+    font-size: 2rem;
+    color: white;
+}
+

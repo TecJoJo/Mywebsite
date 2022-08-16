@@ -49,9 +49,9 @@ function renderTime(){
 }
 const counter = setInterval(renderTime,1000)
 
-//stars from here the projects showcase part, try to use the objectconstructor and arrow-functions if needed to 
-//write the codes here, hopefully now collision with the globle variables
 
+
+//stars from here the projects showcase part, try to use the objectconstructor and arrow-functions if needed to 
 //changing the sources array will dynamicly change the content rendered in the website.
 const sources = ["./People - 84973.mp4","./Mountains - 81945.mp4","./journey.jpg"]
 
@@ -62,7 +62,7 @@ function ProjectShowcase(addressList){
     this.btns =document.querySelectorAll(".btn")
     //binding
     this.renderSliders(addressList)
-      //this.slider must be put behind renderSliders is invoked, or it is undefined yet.
+    //this.slider must be put behind renderSliders is invoked, or it is undefined yet.
     this.sliders = document.querySelectorAll(".slider")
     this.btnControl()
   
@@ -133,6 +133,7 @@ ProjectShowcase.prototype.btnControl = function(){
     })
 }
        
+const page4 = new ProjectShowcase(sources)
             
             
             
@@ -143,4 +144,3 @@ ProjectShowcase.prototype.btnControl = function(){
     
     
 
-const page4 = new ProjectShowcase(sources)
