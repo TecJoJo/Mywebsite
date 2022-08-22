@@ -139,8 +139,31 @@ const page4 = new ProjectShowcase(sources)
             
   
     
+class SmoothScroll{
+    constructor(){
+        this.links = [...document.querySelectorAll(".menu li"),...document.querySelectorAll(".footer-menu li")]
+        console.log(this.links);
+        this.scroll()
+        
+        
+    }
 
-    
+    scroll(){
+        this.links.forEach((link)=>{
+            link.addEventListener("click",(e)=>{
+                e.preventDefault()
+                const sectionName = e.target.getAttribute("href").slice(1)
+                const section = document.getElementById(`${sectionName}`)
+                const sectionOffsetTop = section.offsetTop;
+                
+                const navHeight = document.querySelector(".nav-bar").getBoundingClientRect().height
+                window.scrollTo({top:sectionOffsetTop-navHeight})
+            })
+        })
+    }
+}
+
+const smoothScroll = new SmoothScroll()
     
     
 
