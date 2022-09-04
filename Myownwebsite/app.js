@@ -53,7 +53,7 @@ const counter = setInterval(renderTime,1000)
 
 //stars from here the projects showcase part, try to use the objectconstructor and arrow-functions if needed to 
 //changing the sources array will dynamicly change the content rendered in the website.
-const sources = ["./People - 84973.mp4","./Mountains - 81945.mp4","./journey.jpg"]
+const sources = ["./project1.mkv","./project2.mkv","./project3.mkv","./project4.mkv"]
 
 function ProjectShowcase(addressList){
     this.projects = document.querySelector(".projects")
@@ -80,7 +80,7 @@ ProjectShowcase.prototype.renderSliders = function(addressList){
         const slider = document.createElement("div")
         slider.classList.add("slider")
         slider.style.left = `${index*100}%`
-        if(url.endsWith("mp4")){
+        if(url.endsWith("mp4")||url.endsWith("mkv")){
         slider.innerHTML = `
             <video class="content" autoplay muted loop>
             <source src="${url}">
