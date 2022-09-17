@@ -1,3 +1,7 @@
+Welcome to my personal website!
+
+
+update-journal
 # Mywebsite
 still in progress
 update-7.2022 
