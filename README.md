@@ -1,8 +1,9 @@
+# Mywebsite
 Welcome to my personal website!
 
 
 update-journal
-# Mywebsite
+
 still in progress
 update-7.2022 
 finnally get my nav bar ready and the nice mobile hamburgermenu slider!
