@@ -1,5 +1,5 @@
 # Mywebsite
-Welcome to my personal website! Its fully written by myself as a course assingment of "web-development fundamental" from Hämeen University of Applied Sciences
+Welcome to my personal website! It's fully written by myself with vanilla javascript, CSS and HTML as a course assingment of "web-development fundamental" from Hämeen University of Applied Sciences
 
 
 update-journal
