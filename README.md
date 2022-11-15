@@ -1,3 +1,5 @@
+**I am currently working on with a much bigger portfolio project using React.js.**
+
 # Mywebsite
 Welcome to my personal website! It's fully written by myself with vanilla javascript, CSS and HTML as a course assingment of "web-development fundamental" from Hämeen University of Applied Sciences
 
